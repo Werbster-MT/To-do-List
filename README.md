@@ -11,13 +11,13 @@ This is a simple RESTful CRUD (Create, Read, Update, Delete) application built w
 
 ## Technologies Used
 
-- Java
-- Spring Boot
-- Spring Data JPA
-- HATEOAS (Hypermedia as the Engine of Application State) for RESTful services
-- Hibernate for ORM (Object-Relational Mapping)
-- PostgreSQL Database
-- Maven for dependency management
+- Java ≥17.0.10
+- Spring Boot ≥3.0
+- Spring Data JPA ≥3.2.4
+- HATEOAS ≥2.2.1 (Hypermedia as the Engine of Application State) for RESTful services
+- Hibernate ≥5.5 for ORM (Object-Relational Mapping)
+- PostgreSQL ≥16.2 Database
+- Maven ≥3.9.6 for dependency management
 
 ## Project Structure
 
@@ -34,7 +34,9 @@ This is a simple RESTful CRUD (Create, Read, Update, Delete) application built w
 - Maven installed - [Maven](https://maven.apache.org/download.cgi)
 - PostgreSQL installed - [PostgreSQL](https://www.postgresql.org/)
 
-P.S: Be sure to set correctly the environment paths: ([Env Java](https://www.baeldung.com/java-home-on-windows-mac-os-x-linux), [Env Maven](https://stackoverflow.com/questions/45119595/how-to-add-maven-to-the-path-variable)) 
+P.S: Be sure to set correctly the environment paths: ([Env Java](https://www.baeldung.com/java-home-on-windows-mac-os-x-linux), [Env Maven](https://stackoverflow.com/questions/45119595/how-to-add-maven-to-the-path-variable)). 
+
+_If you have any trouble to install maven see this [tutorial](https://www.youtube.com/watch?v=3EfvEZ_wThc)_.
 
 ## Usage
 
