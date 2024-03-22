@@ -46,7 +46,7 @@ P.S: Be sure to set correctly the environment paths: ([Env Java](https://www.bae
 
 2. **Configure PostgreSQL database**:
 
-   Update the `application.properties` file in `src/main/resources` with your PostgreSQL database configuration.
+   Update the `application.properties` file in `src/main/resources` with your PostgreSQL database configuration and make sure if all information were correct.
 
     ```properties
     spring.datasource.url=jdbc:postgresql://localhost:5432/todo-list
@@ -56,12 +56,13 @@ P.S: Be sure to set correctly the environment paths: ([Env Java](https://www.bae
 
 3. **Import the project into your IDE** (e.g., IntelliJ IDEA, Eclipse).
 
+
 4. **Navigate to the project directory**:
 
      ```
       cd your-path/To-do-List
    ```
-
+ 
 5. **Run the application**:
 
     ```
@@ -70,7 +71,8 @@ P.S: Be sure to set correctly the environment paths: ([Env Java](https://www.bae
 
 6. **Access the application**:
 
-   Open your web browser and navigate to [http://localhost:8080](http://localhost:8080) to access the application.
+   Open your client http ([Postman](https://www.postman.com/downloads/), [Insomnia](https://insomnia.rest/download)) or see [Swagger Documentation](#swagger) to navigate the application endpoints described in the next step.
+
 
 7. **Use the following endpoints**:
 
@@ -98,8 +100,7 @@ To execute the unit tests for this project, follow these steps:
       mvn test
    ```
 
-
-## API Documentation with Swagger:
+## Swagger:
 Swagger is integrated into this application for API documentation. You can access the Swagger UI to interactively explore and test the API endpoints.
 
 1. Access the Swagger UI:
@@ -109,6 +110,7 @@ Swagger is integrated into this application for API documentation. You can acces
 
 2. Explore and test the endpoints:
    Use the Swagger UI interface to view the available endpoints, their parameters, and responses. You can also test the endpoints directly from the Swagger UI.
+
 
    ![Swagger UI](src/main/resources/static/imgs/swagger_ui.png)
 

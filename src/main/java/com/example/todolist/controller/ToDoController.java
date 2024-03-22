@@ -79,6 +79,9 @@ public class ToDoController {
             @ApiResponse(responseCode = "200",
                     description = "successful operation",
                     content = @Content(schema = @Schema(implementation = ToDoRecordDto.class))
+            ),
+            @ApiResponse(responseCode = "204",
+                    description = "no content"
             )
     })
     @GetMapping(value = "/todos", produces = "application/json")
