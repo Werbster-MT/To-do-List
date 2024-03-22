@@ -28,6 +28,12 @@ This is a simple RESTful CRUD (Create, Read, Update, Delete) application built w
 - `com.example.todolist.repository`: Contains repository interfaces for database CRUD operations.
 - `com.example.todolist.service`: Contains service classes implementing business logic.
 
+## Prerequisites
+
+- Java Development Kit (JDK) installed - [Java JDK](https://www.oracle.com/br/java/technologies/downloads/) 
+- Maven installed - [Maven](https://maven.apache.org/download.cgi)
+- PostgreSQL installed - [PostgreSQL](https://www.postgresql.org/)
+
 ## Usage
 
 1. **Clone the repository**:
@@ -48,23 +54,48 @@ This is a simple RESTful CRUD (Create, Read, Update, Delete) application built w
 
 3. **Import the project into your IDE** (e.g., IntelliJ IDEA, Eclipse).
 
-4. **Run the application**:
+4. **Navigate to the project directory**:
+
+     ```
+      cd your-path/To-do-List
+   ```
+
+5. **Run the application**:
 
     ```
     mvn spring-boot:run
     ```
 
-5. **Access the application**:
+6. **Access the application**:
 
    Open your web browser and navigate to [http://localhost:8080](http://localhost:8080) to access the application.
 
-6. **Use the following endpoints**:
+7. **Use the following endpoints**:
 
     - `POST /todos`: Create a new todo item.
     - `GET /todos`: Retrieve a list of all todo items.
     - `GET /todos/{id}`: Retrieve a specific todo item by its ID.
     - `PUT /todos/{id}`: Update an existing todo item.
     - `DELETE /todos/{id}`: Delete a todo item.
+
+## Testing
+
+To execute the unit tests for this project, follow these steps:
+
+1. **Navigate to the project directory**:
+
+   ```
+      cd your path/To-do-List
+   ```
+   
+2. **Run Maven test command**:
+
+   Execute the following Maven command to run the unit tests:
+
+   ```
+      mvn test
+   ```
+
 
 ## API Documentation with Swagger:
 Swagger is integrated into this application for API documentation. You can access the Swagger UI to interactively explore and test the API endpoints.

@@ -62,4 +62,14 @@ public class ToDoService {
         toDoRepository.deleteById(id);
         return foundToDo;
     }
+
+    /**
+     * Saves the provided _ToDo_ entity by updating it in the database.
+     *
+     * @param toDo The _ToDo_ entity to be updated.
+     * @return The updated _ToDo_ entity after it's saved in the database.
+     */
+    public ToDo update(ToDo toDo) {
+        return toDoRepository.save(toDo);
+    }
 }

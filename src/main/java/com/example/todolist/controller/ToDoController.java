@@ -62,6 +62,7 @@ public class ToDoController {
     public ResponseEntity<ToDo> createToDo(@RequestBody @Valid ToDoRecordDto toDoRecord) {
         var toDo = new ToDo();
         BeanUtils.copyProperties(toDoRecord, toDo);
+
         return ResponseEntity.status(HttpStatus.CREATED).body(toDoService.save(toDo));
     }
 
@@ -83,12 +84,15 @@ public class ToDoController {
     @GetMapping(value = "/todos", produces = "application/json")
     public ResponseEntity<List<ToDo>> getToDoList() {
         List <ToDo> toDoList = toDoService.getList();
-        if(!toDoList.isEmpty()){
-            for(ToDo toDo: toDoList){
-                UUID id = toDo.getToDoId();
-                toDo.add(linkTo(methodOn(ToDoController.class).getToDo(id)).withSelfRel());
-            }
+        if(toDoList.isEmpty()){
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
         }
+
+        for(ToDo toDo: toDoList){
+            UUID id = toDo.getToDoId();
+            toDo.add(linkTo(methodOn(ToDoController.class).getToDo(id)).withSelfRel());
+        }
+
         return ResponseEntity.status(HttpStatus.OK).body(toDoList);
     }
 
@@ -117,6 +121,7 @@ public class ToDoController {
         }
 
         foundToDo.get().add(linkTo(methodOn(ToDoController.class).getToDoList()).withRel("ToDo List"));
+
         return ResponseEntity.status(HttpStatus.OK).body(toDoService.getById(id));
     }
 
@@ -146,11 +151,11 @@ public class ToDoController {
             throw new ToDoNotFoundException(id);
         }
 
-        else {
-            ToDo foundToDo = foundToDoOptional.get();
-            BeanUtils.copyProperties(toDoRecord, foundToDo);
-            return ResponseEntity.status(HttpStatus.OK).body(toDoService.save(foundToDo));
-        }
+        ToDo foundToDo = foundToDoOptional.get();
+        BeanUtils.copyProperties(toDoRecord, foundToDo);
+
+        return ResponseEntity.status(HttpStatus.OK).body(toDoService.update(foundToDo));
+
     }
 
     /**
