@@ -34,6 +34,8 @@ This is a simple RESTful CRUD (Create, Read, Update, Delete) application built w
 - Maven installed - [Maven](https://maven.apache.org/download.cgi)
 - PostgreSQL installed - [PostgreSQL](https://www.postgresql.org/)
 
+P.S: Be sure to set correctly the environment paths: ([Env Java](https://www.baeldung.com/java-home-on-windows-mac-os-x-linux), [Env Maven](https://github.com/Werbster-MT/To-do-List)) 
+
 ## Usage
 
 1. **Clone the repository**:
